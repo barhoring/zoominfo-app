@@ -14,7 +14,7 @@ function QuesionsContainer(props) {
           </button>
         );
       })}
-      <QuestionsNav options={options} />
+      {/* <QuestionsNav options={options} /> */}
     </>
   );
 }

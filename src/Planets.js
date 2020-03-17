@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QuesionsContainer from "./QuesionsContainer";
+import QuestionsNav from "./QuestionsNav";
 
 const Planets = () => {
   const [hasError, setErrors] = useState(false);
@@ -32,6 +33,7 @@ const Planets = () => {
       ) : null}
 
       <span>Has error: {JSON.stringify(hasError)}</span>
+      <QuestionsNav questions={planets} />
     </div>
   );
 };

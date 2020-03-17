@@ -2,13 +2,13 @@ import React from "react";
 import "./QuestionsNav.css";
 
 function QuestionsNav(props) {
-  const options = props.options;
+  const questions = props.questions;
   return (
-    <>
-      {options.map(option => (
+    <div className="row">
+      {Object.keys(questions).map(question => (
         <div className="circle"></div>
       ))}
-    </>
+    </div>
   );
 }
 
