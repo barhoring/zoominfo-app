@@ -1,5 +1,6 @@
 import React from "react";
 import Planets from "./Planets";
+import QuesionsContainer from "./QuesionsContainer";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <QuesionsContainer />
       <Planets />
     </div>
   );
