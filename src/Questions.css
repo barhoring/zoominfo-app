@@ -1,0 +1,23 @@
+.Rectangle {
+  background: #fafafa;
+  border: 2px solid #d9e6eb;
+  border-radius: 23px;
+}
+
+.OptionText {
+  font-family: OpenSans-Semibold;
+  font-size: 28px;
+  color: #496472;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.ReactangleBig {
+  width: 570px;
+  height: 164px;
+}
+
+.ReactangleSmall {
+  width: 190px;
+  height: 55px;
+}
