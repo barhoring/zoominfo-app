@@ -21,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <QuesionsContainer />
+      {/* <QuesionsContainer /> */}
       <Planets />
     </div>
   );
