@@ -7,6 +7,10 @@
   background: red;
 }
 
+.circleCurrent {
+  background: green;
+}
+
 .row {
   display: flex;
   flex-direction: row;

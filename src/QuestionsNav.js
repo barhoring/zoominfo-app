@@ -2,11 +2,17 @@ import React from "react";
 import "./QuestionsNav.css";
 
 function QuestionsNav(props) {
-  const questions = props.questions;
+  const { questions, questionIndex, setQuestionIndex } = props;
   return (
     <div className="row">
-      {Object.keys(questions).map(question => (
-        <div className="circle"></div>
+      {Object.keys(questions).map((question, index) => (
+        <div
+          className={questionIndex == index ? "circle circleCurrent" : "circle"}
+          onClick={() => {
+            console.log(index);
+            setQuestionIndex(index);
+          }}
+        ></div>
       ))}
     </div>
   );

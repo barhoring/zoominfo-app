@@ -33,7 +33,11 @@ const Planets = () => {
       ) : null}
 
       <span>Has error: {JSON.stringify(hasError)}</span>
-      <QuestionsNav questions={planets} />
+      <QuestionsNav
+        questions={planets}
+        questionIndex={questionIndex}
+        setQuestionIndex={setQuestionIndex}
+      />
     </div>
   );
 };
