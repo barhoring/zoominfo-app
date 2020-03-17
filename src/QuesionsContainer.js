@@ -1,4 +1,5 @@
 import React from "react";
+import QuestionsNav from "./QuestionsNav";
 import "./Questions.css";
 
 function QuesionsContainer(props) {
@@ -13,6 +14,7 @@ function QuesionsContainer(props) {
           </button>
         );
       })}
+      <QuestionsNav options={options} />
     </>
   );
 }
