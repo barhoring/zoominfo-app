@@ -16,12 +16,23 @@ const Planets = () => {
       // const res = await fetch("https://swapi.co/api/planets/4/");
       res
         .json()
-        .then(res => setPlanets(res))
+        .then(res => {
+          debugger;
+          let shuffledQuestions = res.map(question => {
+            let { options } = question;
+            options = shuffle(options);
+            const questionShuffled = { ...question, ...options };
+            question.options = options;
+            debugger;
+            return question;
+          });
+          setPlanets(shuffledQuestions);
+        })
         .catch(err => setErrors(err));
     }
 
     fetchData();
-  });
+  }, []);
 
   return (
     <div>
@@ -41,4 +52,12 @@ const Planets = () => {
     </div>
   );
 };
+
+const shuffle = unshuffled => {
+  return unshuffled
+    .map(a => ({ sort: Math.random(), value: a }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(a => a.value);
+};
+
 export default Planets;
