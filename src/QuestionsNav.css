@@ -16,3 +16,17 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.okButton {
+  background: #f0f0f0;
+  border-radius: 100px;
+}
+
+.okText {
+  color: #ffffff;
+}
+
+.okSelected {
+  background: #ff8f48;
+  border-radius: 100px;
+}

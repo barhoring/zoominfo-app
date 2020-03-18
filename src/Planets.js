@@ -6,6 +6,7 @@ const Planets = () => {
   const [hasError, setErrors] = useState(false);
   const [planets, setPlanets] = useState({});
   const [questionIndex, setQuestionIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const uri =
     "https://my-json-server.typicode.com/barhoring/fake-server/questions";
@@ -42,6 +43,8 @@ const Planets = () => {
       <span>Has error: {JSON.stringify(hasError)}</span>
       <QuestionsNav
         questions={planets}
+        selectedAnswer={selectedAnswer}
+        setSelectedAnswer={setSelectedAnswer}
         questionIndex={questionIndex}
         setQuestionIndex={setQuestionIndex}
       />
