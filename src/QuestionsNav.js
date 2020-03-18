@@ -6,7 +6,7 @@ function QuestionsNav(props) {
   return (
     <div>
       <div>
-        <button className={selectedAnswer ? "okSelected" : "okButton"}>
+        <button className={selectedAnswer != null ? "okSelected" : "okButton"}>
           <div className="ReactangleSmall okText">OK</div>
         </button>
       </div>

@@ -29,7 +29,7 @@ const Planets = () => {
     }
 
     fetchData();
-  }, []);
+  }, []); // [] means the shuffle will occur for every refresh
 
   return (
     <div>
@@ -37,7 +37,10 @@ const Planets = () => {
       <hr />
 
       {Object.keys(planets).length > 0 ? (
-        <QuesionsContainer {...planets[questionIndex]} />
+        <QuesionsContainer
+          {...planets[questionIndex]}
+          setSelectedAnswer={setSelectedAnswer}
+        />
       ) : null}
 
       <span>Has error: {JSON.stringify(hasError)}</span>
