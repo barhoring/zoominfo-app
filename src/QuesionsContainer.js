@@ -2,7 +2,7 @@ import React from "react";
 import "./Questions.css";
 
 function QuesionsContainer(props) {
-  const { content, options, setSelectedAnswer } = props;
+  const { content, options, selectedAnswer, setSelectedAnswer } = props;
 
   return (
     <>
@@ -14,7 +14,9 @@ function QuesionsContainer(props) {
               setSelectedAnswer(index);
             }}
             key={option}
-            className="Rectangle"
+            className={
+              index == selectedAnswer ? "RectangleSelect" : "Rectangle"
+            }
           >
             <div className="ReactangleSmall OptionText">{option}</div>
           </button>

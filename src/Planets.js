@@ -39,6 +39,7 @@ const Planets = () => {
       {Object.keys(planets).length > 0 ? (
         <QuesionsContainer
           {...planets[questionIndex]}
+          selectedAnswer={selectedAnswer}
           setSelectedAnswer={setSelectedAnswer}
         />
       ) : null}
