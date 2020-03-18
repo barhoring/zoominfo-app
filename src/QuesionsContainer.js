@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import QuestionsNav from "./QuestionsNav";
+import React from "react";
 import "./Questions.css";
 
 function QuesionsContainer(props) {
   const { content, options } = props;
-  const [optionsShuffled, setOptionsShuffled] = useState(options);
 
   return (
     <>

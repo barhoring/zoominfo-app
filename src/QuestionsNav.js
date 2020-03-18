@@ -7,9 +7,9 @@ function QuestionsNav(props) {
     <div className="row">
       {Object.keys(questions).map((question, index) => (
         <div
+          key={question.id}
           className={questionIndex == index ? "circle circleCurrent" : "circle"}
           onClick={() => {
-            console.log(index);
             setQuestionIndex(index);
           }}
         ></div>

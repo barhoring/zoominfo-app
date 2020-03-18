@@ -13,17 +13,13 @@ const Planets = () => {
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(uri);
-      // const res = await fetch("https://swapi.co/api/planets/4/");
       res
         .json()
         .then(res => {
-          debugger;
           let shuffledQuestions = res.map(question => {
             let { options } = question;
             options = shuffle(options);
-            const questionShuffled = { ...question, ...options };
             question.options = options;
-            debugger;
             return question;
           });
           setPlanets(shuffledQuestions);
