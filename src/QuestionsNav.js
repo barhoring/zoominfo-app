@@ -34,7 +34,11 @@ function QuestionsNav(props) {
           hidden={isAnswerCorrect === null}
           className={selectedAnswer != null ? "okSelected" : "okButton"}
           onClick={() => {
-            if (isAnswerCorrect === null) return;
+            if (
+              isAnswerCorrect === null ||
+              questionIndex == questions.length - 1
+            )
+              return;
             setQuestionIndex(questionIndex + 1);
             setSelectedAnswer(null);
             setIsAnswerCorrect(null);
