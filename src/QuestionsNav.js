@@ -1,5 +1,4 @@
 import React from "react";
-import "./QuestionsNav.css";
 
 function QuestionsNav(props) {
   const {
