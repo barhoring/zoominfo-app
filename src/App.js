@@ -1,5 +1,5 @@
 import React from "react";
-import Planets from "./Planets";
+import Questions from "./Questions";
 import QuesionsContainer from "./QuesionsContainer";
 import logo from "./logo.svg";
 import "./App.css";
@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Planets />
+      <Questions />
     </div>
   );
 }

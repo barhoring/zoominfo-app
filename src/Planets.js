@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import QuesionsContainer from "./QuesionsContainer";
 import QuestionsNav from "./QuestionsNav";
 
-const Planets = () => {
+const Questions = () => {
   const [hasError, setErrors] = useState(false);
-  const [planets, setPlanets] = useState({});
+  const [questions, setQuestions] = useState({});
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [correctAnswers, setCorrectAnswers] = useState({});
@@ -37,7 +37,7 @@ const Planets = () => {
             question.options = options;
             return question;
           });
-          setPlanets(shuffledQuestions);
+          setQuestions(shuffledQuestions);
         })
         .catch(err => setErrors(err));
     }
@@ -51,12 +51,14 @@ const Planets = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        width: "80%",
+        border: "solid"
       }}
     >
-      {Object.keys(planets).length > 0 ? (
+      {Object.keys(questions).length > 0 ? (
         <QuesionsContainer
-          {...planets[questionIndex]}
+          {...questions[questionIndex]}
           selectedAnswer={selectedAnswer}
           setSelectedAnswer={setSelectedAnswer}
           isAnswerCorrect={isAnswerCorrect}
@@ -65,7 +67,7 @@ const Planets = () => {
 
       <p>
         <QuestionsNav
-          questions={planets}
+          questions={questions}
           selectedAnswer={selectedAnswer}
           setSelectedAnswer={setSelectedAnswer}
           questionIndex={questionIndex}
@@ -86,4 +88,4 @@ const shuffle = unshuffled => {
     .map(a => a.value);
 };
 
-export default Planets;
+export default Questions;

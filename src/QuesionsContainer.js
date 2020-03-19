@@ -13,7 +13,6 @@ function QuesionsContainer(props) {
   let cNames = "";
 
   if (isAnswerCorrect === true) {
-    debugger;
     cNames = "Rectangle RectangleCorrect";
   } else if (isAnswerCorrect === false) {
     cNames = "Rectangle RectangleWrong";
@@ -21,20 +20,8 @@ function QuesionsContainer(props) {
 
   return (
     <div>
-      <h2 style={{ fontSize: "20px", border: "solid", width: "450px" }}>
-        {content}
-      </h2>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          width: "450px",
-          height: "200px",
-          border: "solid",
-          alignContent: "space-around",
-          justifyContent: "space-around"
-        }}
-      >
+      <h2>{content}</h2>
+      <div className="QuestionsContainer">
         {options.map((option, index) => {
           return (
             <button
