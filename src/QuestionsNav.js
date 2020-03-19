@@ -51,7 +51,7 @@ function QuestionsNav(props) {
         <div className="row">
           {Object.keys(questions).map((question, index) => (
             <div
-              key={question.id}
+              key={index} // it's ok to use index here
               className={
                 questionIndex == index ? "circle circleCurrent" : "circle"
               }

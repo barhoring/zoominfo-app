@@ -11,7 +11,6 @@ const Questions = () => {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
 
   const checkCorrect = answerString => {
-    debugger;
     const isCorrect =
       correctAnswers[questionIndex].correctString == answerString;
     setIsAnswerCorrect(isCorrect);
@@ -52,8 +51,8 @@ const Questions = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        width: "80%",
-        border: "solid"
+        width: "80%"
+        // border: "solid"
       }}
     >
       {Object.keys(questions).length > 0 ? (

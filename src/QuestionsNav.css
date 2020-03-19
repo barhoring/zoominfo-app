@@ -11,12 +11,6 @@
   background: #0d7bab;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .okButton {
   background: #f0f0f0;
   border-radius: 100px;
@@ -29,4 +23,10 @@
 .okSelected {
   background: #ff8f48;
   border-radius: 100px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
