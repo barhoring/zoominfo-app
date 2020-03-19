@@ -27,7 +27,7 @@ function QuestionsNav(props) {
           }}
           className={selectedAnswer != null ? "okSelected" : "okButton"}
         >
-          <div className="ReactangleSmall okText">OK</div>
+          <div className="ReactangleSmall okText Text">OK</div>
         </button>
 
         <button
@@ -44,22 +44,21 @@ function QuestionsNav(props) {
             setIsAnswerCorrect(null);
           }}
         >
-          <div className="ReactangleSmall okText">Continue</div>
+          <div className="ReactangleSmall okText Text">Continue</div>
         </button>
       </div>
-      <div className="row">
-        {Object.keys(questions).map((question, index) => (
-          <div
-            key={question.id}
-            className={
-              questionIndex == index ? "circle circleCurrent" : "circle"
-            }
-            // onClick={() => {
-            //   setQuestionIndex(index);
-            // }}
-          ></div>
-        ))}
-      </div>
+      <p>
+        <div className="row">
+          {Object.keys(questions).map((question, index) => (
+            <div
+              key={question.id}
+              className={
+                questionIndex == index ? "circle circleCurrent" : "circle"
+              }
+            ></div>
+          ))}
+        </div>
+      </p>
     </div>
   );
 }

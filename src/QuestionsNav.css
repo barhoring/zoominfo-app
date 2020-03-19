@@ -4,11 +4,11 @@
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  background: red;
+  background: #c9cfd3;
 }
 
 .circleCurrent {
-  background: green;
+  background: #0d7bab;
 }
 
 .row {

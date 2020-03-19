@@ -47,10 +47,14 @@ const Planets = () => {
   }, []); // [] means the shuffle will occur for every refresh
 
   return (
-    <div>
-      <span>{JSON.stringify(planets)}</span>
-      <hr />
-
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
       {Object.keys(planets).length > 0 ? (
         <QuesionsContainer
           {...planets[questionIndex]}
@@ -60,17 +64,18 @@ const Planets = () => {
         />
       ) : null}
 
-      <span>Has error: {JSON.stringify(hasError)}</span>
-      <QuestionsNav
-        questions={planets}
-        selectedAnswer={selectedAnswer}
-        setSelectedAnswer={setSelectedAnswer}
-        questionIndex={questionIndex}
-        setQuestionIndex={setQuestionIndex}
-        checkCorrect={checkCorrect}
-        isAnswerCorrect={isAnswerCorrect}
-        setIsAnswerCorrect={setIsAnswerCorrect}
-      />
+      <p>
+        <QuestionsNav
+          questions={planets}
+          selectedAnswer={selectedAnswer}
+          setSelectedAnswer={setSelectedAnswer}
+          questionIndex={questionIndex}
+          setQuestionIndex={setQuestionIndex}
+          checkCorrect={checkCorrect}
+          isAnswerCorrect={isAnswerCorrect}
+          setIsAnswerCorrect={setIsAnswerCorrect}
+        />
+      </p>
     </div>
   );
 };

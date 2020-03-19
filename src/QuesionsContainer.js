@@ -21,28 +21,44 @@ function QuesionsContainer(props) {
   }
 
   return (
-    <>
+    <div>
       <h2>{content}</h2>
-      {options.map((option, index) => {
-        return (
-          <button
-            onClick={() => {
-              // don't let user select another answer after revealing the correct answer
-              if (isAnswerCorrect != null) return;
-              setSelectedAnswer(index);
-            }}
-            key={option}
-            className={
-              index == selectedAnswer
-                ? cNames || "Rectangle RectangleSelect"
-                : "Rectangle"
-            }
-          >
-            <div className="ReactangleSmall OptionText">{option}</div>
-          </button>
-        );
-      })}
-    </>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: "500px",
+          height: "300px",
+          border: "solid",
+          // alignItems: "space-around",
+          alignContent: "space-around",
+          // justifyContent: "center"
+          justifyContent: "space-around"
+        }}
+
+        // style={{}}
+      >
+        {options.map((option, index) => {
+          return (
+            <button
+              onClick={() => {
+                // don't let user select another answer after revealing the correct answer
+                if (isAnswerCorrect != null) return;
+                setSelectedAnswer(index);
+              }}
+              key={option}
+              className={
+                index == selectedAnswer
+                  ? cNames || "Rectangle RectangleSelect"
+                  : "Rectangle"
+              }
+            >
+              <div className="ReactangleSmall OptionText Text">{option}</div>
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
