@@ -7,6 +7,15 @@ const Planets = () => {
   const [planets, setPlanets] = useState({});
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [correctAnswers, setCorrectAnswers] = useState({});
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
+
+  const checkCorrect = answerString => {
+    debugger;
+    const isCorrect =
+      correctAnswers[questionIndex].correctString == answerString;
+    setIsAnswerCorrect(isCorrect);
+  };
 
   const uri =
     "https://my-json-server.typicode.com/barhoring/fake-server/questions";
@@ -17,6 +26,12 @@ const Planets = () => {
       res
         .json()
         .then(res => {
+          debugger;
+          setCorrectAnswers(
+            res.map(q => {
+              return { id: q.id, correctString: q.options[0] };
+            })
+          );
           let shuffledQuestions = res.map(question => {
             let { options } = question;
             options = shuffle(options);
@@ -41,6 +56,7 @@ const Planets = () => {
           {...planets[questionIndex]}
           selectedAnswer={selectedAnswer}
           setSelectedAnswer={setSelectedAnswer}
+          isAnswerCorrect={isAnswerCorrect}
         />
       ) : null}
 
@@ -51,6 +67,9 @@ const Planets = () => {
         setSelectedAnswer={setSelectedAnswer}
         questionIndex={questionIndex}
         setQuestionIndex={setQuestionIndex}
+        checkCorrect={checkCorrect}
+        isAnswerCorrect={isAnswerCorrect}
+        setIsAnswerCorrect={setIsAnswerCorrect}
       />
     </div>
   );

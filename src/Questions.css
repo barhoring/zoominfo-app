@@ -27,8 +27,13 @@
 }
 
 .RectangleSelect {
-  /* border: 4px solid #33c933 100%; */
-  background: #fafafa;
   border: 4px solid #0d7bab;
-  border-radius: 23px;
+}
+
+.RectangleCorrect {
+  border: 4px solid #33c933;
+}
+
+.RectangleWrong {
+  border: 4px solid #fb4343;
 }
