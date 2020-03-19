@@ -26,7 +26,6 @@ const Planets = () => {
       res
         .json()
         .then(res => {
-          debugger;
           setCorrectAnswers(
             res.map(q => {
               return { id: q.id, correctString: q.options[0] };

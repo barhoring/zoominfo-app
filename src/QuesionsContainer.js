@@ -7,8 +7,7 @@ function QuesionsContainer(props) {
     options,
     selectedAnswer,
     setSelectedAnswer,
-    isAnswerCorrect,
-    setIsAnswerCorrect
+    isAnswerCorrect
   } = props;
 
   let cNames = "";
@@ -22,21 +21,19 @@ function QuesionsContainer(props) {
 
   return (
     <div>
-      <h2>{content}</h2>
+      <h2 style={{ fontSize: "20px", border: "solid", width: "450px" }}>
+        {content}
+      </h2>
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
-          width: "500px",
-          height: "300px",
+          width: "450px",
+          height: "200px",
           border: "solid",
-          // alignItems: "space-around",
           alignContent: "space-around",
-          // justifyContent: "center"
           justifyContent: "space-around"
         }}
-
-        // style={{}}
       >
         {options.map((option, index) => {
           return (
@@ -48,7 +45,7 @@ function QuesionsContainer(props) {
               }}
               key={option}
               className={
-                index == selectedAnswer
+                index === selectedAnswer
                   ? cNames || "Rectangle RectangleSelect"
                   : "Rectangle"
               }
