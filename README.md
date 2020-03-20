@@ -9,7 +9,7 @@ Bar Horing Amir
 
 #### Clone the repo
 
-`git clone ___`
+`git clone https://github.com/barhoring/zoominfo-app.git`
 
 #### Install dependencies
 
