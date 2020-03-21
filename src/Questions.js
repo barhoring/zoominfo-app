@@ -3,7 +3,6 @@ import QuesionsContainer from "./QuesionsContainer";
 import QuestionsNav from "./QuestionsNav";
 
 const Questions = () => {
-  const [hasError, setErrors] = useState(false);
   const [questions, setQuestions] = useState({});
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -12,7 +11,7 @@ const Questions = () => {
 
   const checkCorrect = answerString => {
     const isCorrect =
-      correctAnswers[questionIndex].correctString == answerString;
+      correctAnswers[questionIndex].correctString === answerString;
     setIsAnswerCorrect(isCorrect);
   };
 
@@ -38,7 +37,7 @@ const Questions = () => {
           });
           setQuestions(shuffledQuestions);
         })
-        .catch(err => setErrors(err));
+        .catch(err => console.log(err));
     }
 
     fetchData();

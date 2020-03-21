@@ -35,7 +35,7 @@ function QuestionsNav(props) {
           onClick={() => {
             if (
               isAnswerCorrect === null ||
-              questionIndex == questions.length - 1
+              questionIndex === questions.length - 1
             )
               return;
             setQuestionIndex(questionIndex + 1);
@@ -52,7 +52,7 @@ function QuestionsNav(props) {
             <div
               key={index} // it's ok to use index here
               className={
-                questionIndex == index ? "circle circleCurrent" : "circle"
+                questionIndex === index ? "circle circleCurrent" : "circle"
               }
             ></div>
           ))}

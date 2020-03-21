@@ -1,6 +1,4 @@
 import React from "react";
-// import * from "./github.svg";
-import logo from "./logo.svg";
 
 import github from "./github.svg";
 import stackoverflow from "./stackoverflow.svg";
