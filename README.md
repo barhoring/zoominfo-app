@@ -1,3 +1,5 @@
+See this app [live](https://barhoring.github.io/zoominfo-app/)
+
 A funny trivia game.
 Questions are served as json from
 [fake-server](https://github.com/barhoring/fake-server)
